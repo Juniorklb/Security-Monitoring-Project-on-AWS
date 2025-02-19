@@ -1,6 +1,6 @@
 <h1>Security-Monitoring</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ 
 
 <h2>Description</h2>
 As part of my cybersecurity and cloud computing apprenticeship, I implemented a security monitoring system on AWS. This project aimed to detect and alert on critical changes in the AWS environment, including the deletion of S3 buckets, which can indicate a malicious action or a misconfiguration.
@@ -29,7 +29,6 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 -<b>Configure a CloudWatch Log Group to store CloudTrail logs</b>
 <p align="center">
-<img src="Cloudtrail.png" width="80%" alt="Disk Sanitization Steps">
 <br />
 <br />
 </p>
