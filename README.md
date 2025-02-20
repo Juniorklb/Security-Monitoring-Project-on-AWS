@@ -11,6 +11,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>CloudTrail</b> 
 - <b>CloudWatch</b>
+- <b>S3 bucket</b>
 
 <h2>Environments Used </h2>
 
@@ -20,6 +21,12 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 
 -<b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
+
+<p align="center">
+    CloudTrail has been enabled to capture logs of all AWS activities:  
+    <br/>
+    <img src="https://raw.githubusercontent.com/Juniorklb/Security-Monitoring-Project-on-AWS/main/Cloudtrail.PNG" alt="CloudTrail Screenshot" width="80%">
+</p>
 
 -<b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
