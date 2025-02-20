@@ -20,21 +20,23 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 <h2>Steps walk-through:</h2>
 
 
--<b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
+- <b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
 
 <p align="center">
-    CloudTrail has been enabled to capture logs of all AWS activities:  
-    <br/>
+    Activation of AWS CloudTrail <br/>
     <img src="https://raw.githubusercontent.com/Juniorklb/Security-Monitoring-Project-on-AWS/main/Cloudtrail.PNG" alt="CloudTrail Screenshot" width="80%">
+ 
+     CloudTrail has been enabled to capture logs of all AWS activities:  
+    
 </p>
 
--<b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
+- <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
--<b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
+- <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
 
--<b>Test the solution and verify the alerts are working correctly.</b>
+- <b>Test the solution and verify the alerts are working correctly.</b>
 
--<b>Configure a CloudWatch Log Group to store CloudTrail logs</b>
+- <b>Configure a CloudWatch Log Group to store CloudTrail logs</b>
 <p align="center">
 <br />
 <br />
