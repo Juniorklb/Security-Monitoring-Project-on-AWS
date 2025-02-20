@@ -47,7 +47,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
   <b>3️⃣ Name the log group: CloudTrailLogs.</b>
   
-  <b>4️⃣Set a retention: 1 week.</b>
+  <b>4️⃣Set retention: 1 week.</b>
 
   <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
   
@@ -55,7 +55,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
   
 <p align="center">
     Configuration of Cloudwatch to CloudTrail <br/>
-    <img src="][https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/f410569791caf373629bc99aff2dc085bf404af5/Loggroup.PNG]
+    <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/f410569791caf373629bc99aff2dc085bf404af5/Loggroup.PNG"
      alt="CloudTrail Screenshot" width="80%">
  
 - <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
