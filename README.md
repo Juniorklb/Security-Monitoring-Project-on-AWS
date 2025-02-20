@@ -41,6 +41,8 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
+      Amazon CloudWatch is a monitoring and observability service in AWS that helps you collect, analyze, and respond to operational and performance data from your AWS infrastructure, applications, and services. It allows you to monitor resources in real-time, set up alarms, and visualize metrics and logs.
+
   <b>1️⃣ Go to CloudWatch → Log Groups.</b>
 
   <b>2️⃣ Click on Create log group.</b>
