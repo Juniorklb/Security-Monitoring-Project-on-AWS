@@ -26,7 +26,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
     Activation of AWS CloudTrail <br/>
     <img src="https://raw.githubusercontent.com/Juniorklb/Security-Monitoring-Project-on-AWS/main/Cloudtrail.PNG" alt="CloudTrail Screenshot" width="80%">
  
-     CloudTrail has been enabled to capture logs of all AWS activities:  
+     CloudTrail has been enabled to capture logs of all AWS activities.
     
 </p>
 
