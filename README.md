@@ -41,6 +41,18 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
+  <b>1️⃣ Go to CloudWatch → Log Groups.</b>
+
+  <b>2️⃣ Click on Create log group.</b>
+
+  <b>3️⃣ Name the log group: CloudTrailLogs.</b>
+  
+  <b>4️⃣Set a retention: 1 week.</b>
+
+  <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
+  
+
+  
 <p align="center">
     Configuration of Cloudwatch to CloudTrail <br/>
     <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/c528256f1efa144520f8f9b5ab1b3e2a45730c8d/CloudtrailCloudwatch.PNG"
