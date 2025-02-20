@@ -41,6 +41,11 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
+<p align="center">
+    Configuration of Cloudwatch to CloudTrail <br/>
+    <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/c528256f1efa144520f8f9b5ab1b3e2a45730c8d/CloudtrailCloudwatch.PNG"
+     alt="CloudTrail Screenshot" width="80%">
+ 
 - <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
 
 - <b>Test the solution and verify the alerts are working correctly.</b>
