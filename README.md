@@ -55,7 +55,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
   
 <p align="center">
     Configuration of Cloudwatch to CloudTrail <br/>
-    <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/c528256f1efa144520f8f9b5ab1b3e2a45730c8d/CloudtrailCloudwatch.PNG"
+    <img src="][https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/f410569791caf373629bc99aff2dc085bf404af5/Loggroup.PNG]
      alt="CloudTrail Screenshot" width="80%">
  
 - <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
