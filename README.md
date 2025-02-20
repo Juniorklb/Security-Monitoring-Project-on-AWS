@@ -22,6 +22,15 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
 
+  <b> 1️⃣ Access AWS CloudTrail</b>
+  
+  .<b> Log in to your AWS Console.</b>
+  
+  .<b> In the search bar, type CloudTrail and click on it.</b>
+
+  <b>2️⃣ Create a New Trail</b>
+
+  .<b>Click on Create a Trail.</b>
 <p align="center">
     Activation of AWS CloudTrail <br/>
     <img src="https://raw.githubusercontent.com/Juniorklb/Security-Monitoring-Project-on-AWS/main/Cloudtrail.PNG" alt="CloudTrail Screenshot" width="80%">
