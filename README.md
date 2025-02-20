@@ -11,7 +11,7 @@ As part of my cybersecurity and cloud computing apprenticeship, I implemented a 
 
 - <b>CloudTrail</b> 
 - <b>CloudWatch</b>
-- <b>S3 bucket</b>
+- <b>S3 </b>
 
 <h2>Environments Used </h2>
 
