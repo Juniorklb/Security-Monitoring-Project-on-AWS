@@ -68,6 +68,18 @@ This project focuses on implementing a security monitoring system in AWS to dete
  
 - <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
 
+  <b>1️⃣ Go to CloudWatch → Alarms → Create Alarm.</b>
+  
+<p align="center">
+   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/7c278c90292b57158a2971121285036cf04da8bc/selectmetric.PNG"
+    alt="CloudTrail Screenshot" width="80%">
+ 
+  <b>2️⃣ Choose Select metric → SecurityMetrics → S3BucketDeletion.</b>
+  
+  <b>3️⃣ Set a threshold</b>
+
+  <b>4️⃣ Save the alert</b>
+  
 - <b>Test the solution and verify the alerts are working correctly.</b>
 
 - <b>Configure a CloudWatch Log Group to store CloudTrail logs</b>
