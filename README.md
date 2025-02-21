@@ -47,7 +47,12 @@ This project focuses on implementing a security monitoring system in AWS to dete
   <b>3️⃣ Name the log group: CloudTrailLogs.</b>
   
   <b>4️⃣Set retention: 1 week.</b>
+  
+<p align="center">
+   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/792c3aab9800cae6d6cf176e0df4bd6a7ddc1b04/step.PNG"
+    alt="CloudTrail Screenshot" width="80%">
 
+ 
   <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
   
   
