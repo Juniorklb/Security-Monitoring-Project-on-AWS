@@ -22,7 +22,8 @@ This project focuses on implementing a security monitoring system in AWS to dete
 
   <b> 1️⃣ Access AWS CloudTrail</b>
   
-  .<b> Log in to your AWS Console.</b>
+  .<b> Log in to 
+       <br/><a href="https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1">AWS console</a></b>
   
   .<b> In the search bar, type CloudTrail and click on it.</b>
 
