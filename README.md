@@ -39,9 +39,6 @@ This project focuses on implementing a security monitoring system in AWS to dete
 
 - <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
 
-      Amazon CloudWatch is a monitoring and observability service in AWS that helps you collect, analyze, and respond to 
-      operational and performance data from your AWS infrastructure, applications, and services. It allows you to monitor 
-      resources in real-time, set up alarms, and visualize metrics and logs.
 
   <b>1️⃣ Go to CloudWatch → Log Groups.</b>
 
@@ -53,12 +50,16 @@ This project focuses on implementing a security monitoring system in AWS to dete
 
   <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
   
-
   
 <p align="center">
     Configuration of Cloudwatch to CloudTrail <br/>
     <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/f410569791caf373629bc99aff2dc085bf404af5/Loggroup.PNG"
      alt="CloudTrail Screenshot" width="80%">
+ 
+ <b> Amazon CloudWatch is a service in AWS that helps you collect, analyze, and respond to 
+      operational and performance data from your AWS infrastructure, applications, and services. It allows you to monitor 
+      resources in real-time, set up alarms, and visualize metrics and logs.</b>
+
  
 - <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
 
