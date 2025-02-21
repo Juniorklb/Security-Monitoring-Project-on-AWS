@@ -48,6 +48,10 @@ This project focuses on implementing a security monitoring system in AWS to dete
   
   <b>4️⃣Set retention: 1 week.</b>
 
+<p align="center"
+ <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/9b7de4d7807d6c384168919cbc58696b1289b780/1step.PNG"
+  alt="CloudTrail Screenshot" width="80%">
+
   <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
   
   
