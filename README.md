@@ -71,11 +71,16 @@ This project focuses on implementing a security monitoring system in AWS to dete
   <b>1️⃣ Go to CloudWatch → Alarms → Create Alarm.</b>
   
 <p align="center">
-   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/7c278c90292b57158a2971121285036cf04da8bc/selectmetric.PNG"
+   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/9fe6c21a7cc66d36f1f82da847aeab12396fbeba/alarm.PNG"
     alt="CloudTrail Screenshot" width="80%">
  
   <b>2️⃣ Choose Select metric → SecurityMetrics → S3BucketDeletion.</b>
-  
+
+<p align="center">
+   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/7c278c90292b57158a2971121285036cf04da8bc/selectmetric.PNG"
+    alt="CloudTrail Screenshot" width="80%">
+
+ 
   <b>3️⃣ Set a threshold</b>
 
   <b>4️⃣ Save the alert</b>
