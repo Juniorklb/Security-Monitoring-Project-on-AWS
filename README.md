@@ -2,22 +2,25 @@
 
  
 
-<h2>Description</h2>
-As part of my cybersecurity and cloud computing apprenticeship, I implemented a security monitoring system on AWS. This project aimed to detect and alert on critical changes in the AWS environment, including the deletion of S3 buckets, which can indicate a malicious action or a misconfiguration.
+<h2>Introduction</h2>
+This project focuses on implementing a security monitoring system in AWS to detect and alert critical changes within the cloud environment. The system is designed to monitor key security events, such as the deletion of S3 buckets, which could indicate malicious activity or misconfiguration.
 <br />
 
 
-<h2> Utilities Used</h2>
+<h2> Prerequisites </h2>
 
 - <b>CloudTrail</b> 
 - <b>CloudWatch</b>
 - <b>S3 </b>
 
-<h2>Environments Used </h2>
+<h2>Setup requirements </h2>
 
-- <b>AWS console</b> 
+- [AWS console]("https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1")
 
-<h2>Steps walk-through:</h2>
+- <br/><a href="https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1"><b>AWS console</b></a>
+
+
+<h2>Setup instructions</h2>
 
 
 - <b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
