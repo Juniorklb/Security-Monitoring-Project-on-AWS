@@ -15,8 +15,7 @@ This project focuses on implementing a security monitoring system in AWS to dete
 
 <h2>Setup requirements </h2>
 
-- <br/><a href="https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1"><b>AWS console</b></a>
-
+- <b><br/><a href="https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1">AWS console</a></b>
 
 <h2>Setup instructions</h2>
 
