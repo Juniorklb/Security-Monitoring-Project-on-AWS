@@ -3,7 +3,7 @@
 ## 🎯Overview
 This project demonstrates how to monitor and enhance cloud security using AWS services. It helps detect unauthorized access, security threats, and misconfigurations while automating incident responses.
 
-## 📜Features
+## Features
 - **Log Monitoring**: Tracks AWS API activity with CloudTrail.
 - **Threat Detection**: Uses GuardDuty to identify security threats.
 - **Automated Alerts**: Sends notifications via SNS when suspicious activity is detected.
