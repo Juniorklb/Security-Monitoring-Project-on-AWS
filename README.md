@@ -1,9 +1,9 @@
 # AWS Security Monitoring Project
 
-## Overview
+## 🎯Overview
 This project demonstrates how to monitor and enhance cloud security using AWS services. It helps detect unauthorized access, security threats, and misconfigurations while automating incident responses.
 
-## Features
+## 📜Features
 - **Log Monitoring**: Tracks AWS API activity with CloudTrail.
 - **Threat Detection**: Uses GuardDuty to identify security threats.
 - **Automated Alerts**: Sends notifications via SNS when suspicious activity is detected.
@@ -65,13 +65,12 @@ aws-security-monitoring/
 ```
 
 ## Author
-[Your Name] - Aspiring Cloud Security Engineer
+[Junior Kalomba]- Aspiring Cloud Security Engineer
 
 ---
 
 ## Contact
-- **GitHub**: [your-github-link]
-- **LinkedIn**: [your-linkedin-link]
+<a href="https://www.linkedin.com/in/junior-kalomba-10002a18a/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
 ---
 Feel free to contribute or suggest improvements!
