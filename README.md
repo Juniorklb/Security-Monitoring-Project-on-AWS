@@ -1,104 +1,77 @@
-<h1>Security-Monitoring with AWS</h1>
+# AWS Security Monitoring Project
 
- 
+## Overview
+This project demonstrates how to monitor and enhance cloud security using AWS services. It helps detect unauthorized access, security threats, and misconfigurations while automating incident responses.
 
-<h2>Introduction</h2>
-This project focuses on implementing a security monitoring system in AWS to detect and alert critical changes within the cloud environment. The system is designed to monitor key security events, such as the deletion of S3 buckets, which could indicate malicious activity or misconfiguration.
-<br />
+## Features
+- **Log Monitoring**: Tracks AWS API activity with CloudTrail.
+- **Threat Detection**: Uses GuardDuty to identify security threats.
+- **Automated Alerts**: Sends notifications via SNS when suspicious activity is detected.
+- **Security Compliance**: Uses Security Hub to assess security posture.
+- **Incident Response Automation**: Uses AWS Lambda to take action when threats are found.
 
+## AWS Services Used
+- AWS CloudTrail
+- AWS GuardDuty
+- AWS Security Hub
+- AWS CloudWatch
+- AWS IAM (Identity & Access Management)
+- AWS Lambda
+- AWS SNS (Simple Notification Service)
+- AWS Config
 
-<h2> Prerequisites </h2>
+## Setup Instructions
+1. **Enable CloudTrail**
+   - Go to AWS CloudTrail and create a new trail.
+   - Store logs in an S3 bucket with encryption enabled.
 
-- <b>CloudTrail</b> 
-- <b>CloudWatch</b>
-- <b>S3 </b>
+2. **Activate GuardDuty**
+   - Navigate to AWS GuardDuty and enable threat detection.
+   - Set up findings to be sent to Security Hub.
 
-<h2>Setup requirements </h2>
-  <br/><a href="https://ca-central-1.console.aws.amazon.com/console/home?region=ca-central-1">AWS console</a>
-<h2>Setup instructions</h2>
+3. **Configure CloudWatch Alarms**
+   - Create CloudWatch log groups for security-related logs.
+   - Set up alarms for unusual API activity.
 
+4. **Set Up Security Hub**
+   - Enable Security Hub and integrate it with GuardDuty and AWS Config.
 
-- <b>Enable AWS CloudTrail to track AWS resource activities and changes.</b>
+5. **Automate Incident Response with Lambda**
+   - Create an AWS Lambda function to disable compromised IAM users.
+   - Trigger the function based on CloudWatch events.
 
-  <b> 1️⃣ Access AWS CloudTrail</b>
-  
-  .<b> Log in to your AWS console</b>
-  
-  .<b> In the search bar, type CloudTrail and click on it.</b>
+6. **Set Up Alerts with SNS**
+   - Configure an SNS topic to send email/SMS notifications when threats are detected.
 
-  <b>2️⃣ Create a New Trail</b>
+## Testing the Security Monitoring System
+- Simulate unauthorized access attempts.
+- Perform privilege escalation attempts.
+- Verify that alerts and automated responses are working.
 
-  .<b>Click on Create a Trail.</b>
-<p align="center">
-    Activation of AWS CloudTrail <br/>
-    <img src="https://raw.githubusercontent.com/Juniorklb/Security-Monitoring-Project-on-AWS/main/Cloudtrail.PNG" alt="CloudTrail Screenshot" width="80%">
- 
-     CloudTrail has been enabled to capture logs of all AWS activities.
-    
-</p>
+## Future Enhancements
+- Add AWS WAF (Web Application Firewall) for additional protection.
+- Implement machine learning-based anomaly detection.
+- Store security logs in AWS OpenSearch for advanced analysis.
 
-- <b>Configure a CloudWatch Log Group to store CloudTrail logs.</b>
-
-
-  <b>1️⃣ Go to CloudWatch → Log Groups.</b>
-
-  <b>2️⃣ Click on Create log group.</b>
-
-  <b>3️⃣ Name the log group: CloudTrailLogs.</b>
-  
-  <b>4️⃣Set retention: 1 week.</b>
-  
-<p align="center">
-   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/792c3aab9800cae6d6cf176e0df4bd6a7ddc1b04/step.PNG"
-    alt="CloudTrail Screenshot" width="80%">
-
- 
-  <b>5️⃣ Associate the Log Group with CloudTrail logs.</b>
-  
-  
-<p align="center">
-    Configuration of Cloudwatch to CloudTrail <br/>
-    <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/f410569791caf373629bc99aff2dc085bf404af5/Loggroup.PNG"
-     alt="CloudTrail Screenshot" width="80%">
- 
- <b> Amazon CloudWatch is a service in AWS that helps you collect, analyze, and respond to 
-      operational and performance data from your AWS infrastructure, applications, and services. It allows you to monitor 
-      resources in real-time, set up alarms, and visualize metrics and logs.</b>
-
- 
-- <b>Create a metric filter on CloudWatch to detect S3 bucket deletion.</b>
-
-  <b>1️⃣ Go to CloudWatch → Alarms → Create Alarm.</b>
-  
-<p align="center">
-   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/9fe6c21a7cc66d36f1f82da847aeab12396fbeba/alarm.PNG"
-    alt="CloudTrail Screenshot" width="80%">
- 
-  <b>2️⃣ Choose Select metric → SecurityMetrics → S3BucketDeletion.</b>
-
-<p align="center">
-   <img src="https://github.com/Juniorklb/Security-Monitoring-Project-on-AWS/blob/7c278c90292b57158a2971121285036cf04da8bc/selectmetric.PNG"
-    alt="CloudTrail Screenshot" width="80%">
-
- 
-  <b>3️⃣ Set a threshold</b>
-
-  <b>4️⃣ Save the alert</b>
-  
-- <b>Test the solution and verify the alerts are working correctly.</b>
-
-- <b>Configure a CloudWatch Log Group to store CloudTrail logs</b>
-<p align="center">
-<br />
-<br />
-</p>
-
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+## Repository Structure
 ```
---!>
+aws-security-monitoring/
+│── README.md  # Project documentation
+│── setup/     # CloudFormation or Terraform scripts (if applicable)
+│── lambda/    # AWS Lambda functions
+│── logs/      # Sample security logs
+│── scripts/   # Python/Bash scripts for security automation
+└── reports/   # Security reports and dashboards
+```
+
+## Author
+[Your Name] - Aspiring Cloud Security Engineer
+
+---
+
+## Contact
+- **GitHub**: [your-github-link]
+- **LinkedIn**: [your-linkedin-link]
+
+---
+Feel free to contribute or suggest improvements!
