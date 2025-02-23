@@ -1,76 +1,85 @@
-# AWS Security Monitoring Project
+# AWS Security Monitoring & Automation
 
-## 🎯Overview
-This project demonstrates how to monitor and enhance cloud security using AWS services. It helps detect unauthorized access, security threats, and misconfigurations while automating incident responses.
+## 🚀 Project Overview
+This project implements a **security monitoring system** in AWS that detects multiple failed login attempts and automatically disables the compromised IAM user. It enhances security by preventing unauthorized access in real time.
 
-## Features
-- **Log Monitoring**: Tracks AWS API activity with CloudTrail.
-- **Threat Detection**: Uses GuardDuty to identify security threats.
-- **Automated Alerts**: Sends notifications via SNS when suspicious activity is detected.
-- **Security Compliance**: Uses Security Hub to assess security posture.
-- **Incident Response Automation**: Uses AWS Lambda to take action when threats are found.
+## 🔹 AWS Services Used
+- **AWS CloudTrail** – Tracks user activity and failed login attempts.
+- **AWS CloudWatch** – Monitors login failures and triggers alarms.
+- **AWS Lambda** – Automates security responses by disabling compromised IAM users.
+- **AWS IAM** – Manages user access and security policies.
 
-## AWS Services Used
-- AWS CloudTrail
-- AWS GuardDuty
-- AWS Security Hub
-- AWS CloudWatch
-- AWS IAM (Identity & Access Management)
-- AWS Lambda
-- AWS SNS (Simple Notification Service)
-- AWS Config
+## 🔍 How It Works
+1. **CloudTrail** logs all AWS login attempts.
+2. **CloudWatch** monitors failed login attempts and triggers an alarm.
+3. **Lambda Function** is triggered to disable the IAM user if multiple failed attempts are detected.
+4. The compromised user's login profile and MFA are deactivated to prevent unauthorized access.
 
-## Setup Instructions
-1. **Enable CloudTrail**
-   - Go to AWS CloudTrail and create a new trail.
-   - Store logs in an S3 bucket with encryption enabled.
+## 🛠️ Setup Guide
+### **Step 1: Enable CloudTrail**
+1. Go to **AWS Console → CloudTrail → Create Trail**.
+2. Name the trail and enable **Management Events**.
+3. Save the trail.
 
-2. **Activate GuardDuty**
-   - Navigate to AWS GuardDuty and enable threat detection.
-   - Set up findings to be sent to Security Hub.
+### **Step 2: Create a CloudWatch Alarm**
+1. Go to **AWS Console → CloudWatch → Alarms → Create Alarm**.
+2. Select **CloudTrail as data source**.
+3. Choose **Failed Console Login Attempts** as the metric.
+4. Set threshold to **3 failed logins in 5 minutes**.
+5. Choose **SNS topic** for notifications (optional).
+6. Save the alarm.
 
-3. **Configure CloudWatch Alarms**
-   - Create CloudWatch log groups for security-related logs.
-   - Set up alarms for unusual API activity.
+### **Step 3: Create a Lambda Function**
+1. Go to **AWS Console → Lambda → Create Function**.
+2. Choose **Python 3.9**, name it `DisableUserOnFailedLogins`.
+3. Add the following code:
 
-4. **Set Up Security Hub**
-   - Enable Security Hub and integrate it with GuardDuty and AWS Config.
+```python
+import json
+import boto3
 
-5. **Automate Incident Response with Lambda**
-   - Create an AWS Lambda function to disable compromised IAM users.
-   - Trigger the function based on CloudWatch events.
+iam = boto3.client('iam')
 
-6. **Set Up Alerts with SNS**
-   - Configure an SNS topic to send email/SMS notifications when threats are detected.
-
-## Testing the Security Monitoring System
-- Simulate unauthorized access attempts.
-- Perform privilege escalation attempts.
-- Verify that alerts and automated responses are working.
-
-## Future Enhancements
-- Add AWS WAF (Web Application Firewall) for additional protection.
-- Implement machine learning-based anomaly detection.
-- Store security logs in AWS OpenSearch for advanced analysis.
-
-## Repository Structure
-```
-aws-security-monitoring/
-│── README.md  # Project documentation
-│── setup/     # CloudFormation or Terraform scripts (if applicable)
-│── lambda/    # AWS Lambda functions
-│── logs/      # Sample security logs
-│── scripts/   # Python/Bash scripts for security automation
-└── reports/   # Security reports and dashboards
+def lambda_handler(event, context):
+    print("Event:", json.dumps(event))
+    username = event.get("detail", {}).get("userIdentity", {}).get("userName")
+    if username:
+        try:
+            iam.update_login_profile(UserName=username, PasswordResetRequired=True)
+            iam.deactivate_mfa_device(UserName=username, SerialNumber="mfa-device-serial")
+            print(f"User {username} has been disabled due to multiple failed logins.")
+        except Exception as e:
+            print(f"Error disabling user {username}: {str(e)}")
+    return {"statusCode": 200, "body": json.dumps("Security automation executed successfully")}
 ```
 
-## Author
-[Junior Kalomba]- Aspiring Cloud Security Engineer
+### **Step 4: Attach IAM Permissions**
+1. Go to **AWS IAM → Roles**.
+2. Select the role attached to the Lambda function.
+3. Attach the following permissions:
+   - `iam:UpdateLoginProfile`
+   - `iam:DeactivateMFADevice`
+
+### **Step 5: Connect CloudWatch Alarm to Lambda**
+1. Edit the CloudWatch Alarm.
+2. Select **Send to an AWS Lambda function**.
+3. Choose the **DisableUserOnFailedLogins** function.
+4. Save changes.
+
+### **Step 6: Test Your Setup**
+1. Try logging in with an **IAM user** using the **wrong password multiple times**.
+2. Check **CloudWatch Logs** for Lambda execution.
+3. Verify the IAM user’s **login profile is disabled**.
+
+## 📌 Results & Future Improvements
+✅ **Successfully detects failed logins and disables IAM users automatically**. 
+🚀 **Future Improvements:** Implement SNS notifications and integrate AWS Security Hub.
+
+## 📎 Junior Kalomba
+Developed as part of my AWS Security and Cloud Engineering practice.
 
 ---
+**🔗 Feel free to contribute or suggest improvements!** 
 
-## Contact me
-<a href="https://www.linkedin.com/in/junior-kalomba-10002a18a/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
----
-Feel free to contribute or suggest improvements!
+<a href="https://linkedin.com/in/junior-kalomba-10002a18a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="junior-kalomba-10002a18a" height="30" width="40" /></a>
